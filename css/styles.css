@@ -125,20 +125,21 @@ button.blue > svg {
   }
   .navigation-items {
     display: flex;
-    gap: 2px;
+    gap: 16px;
+
   }
+
   .navigation-items > a {
     color: #000f2e;
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
-    line-height: normal;
     transition: .4s ease-in-out;
+    display: flex;
 
     background-color: #ffffff;
-    padding: 8px 16px;
     border-radius: 9px;
-    margin: 0 20%;
+    margin: 15px 20%;
     text-align: center;
     align-items: center;
     justify-content: center;
