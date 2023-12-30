@@ -1,0 +1,188 @@
+/* raleway-regular - latin */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #000f2e;
+}
+/* button but not accordeon class */
+button.blue {
+    border: none;
+    padding: 16px 32px;
+    border-radius: 16px;
+    background: #2563EB;
+    box-shadow: 0px -5px 0px 0px #023EB8 inset;
+
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+    width: fit-content;
+    font-weight: bolder;
+}
+
+
+button.blue:active {
+    box-shadow: 0px -2px 0px 0px #023EB8 inset;
+    position: relative;
+    transform: translate(-50%, calc(-50% + 5px));
+}
+
+button.blue > svg {
+    color: white;
+}
+
+*, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  main {
+    margin-top: 50px;
+  }
+  /* Navigation */
+  .navigation-header {
+    background-color: #2563EB;
+    padding: 0 5%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  
+  }
+  
+  nav {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+  }
+  .logo-container > a {
+    color: ghostwhite;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 26px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .navigation-items {
+    display: flex;
+    gap: 40px;
+  }
+  .navigation-items > a {
+    color: ghostwhite;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: .4s ease-in-out;
+  }
+  .navigation-items > a:hover {
+    color: white;
+  }
+  .hamburger {
+    display: none;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+  }
+    .hamburger {
+      display: flex;
+      cursor: pointer;
+    }
+    .hamburger #closeHam {
+      display: none;
+    }
+    .navigation-items {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      top: 58px;
+      background-color: #2563EB;
+      width: 100%;
+      height: calc(100vh - 58px);
+      padding-top: 60px;
+      gap: 10vh;
+      animation: slideRight .5s ease-in-out;
+    }
+
+
+@keyframes slideRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.accordion {
+    background-color: #fff;
+    color: #000f2e;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 9px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: #2563EB;
+    color: white;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 20px 18px;
+    background-color: white;
+    border-radius: 9px;
+    display: none;
+    overflow-x: hidden;
+  }
+
+  .panel > h2 {
+      font-size: 20px;
+      margin: 16px 0 8px 0;
+  }
+
+  .panel > img {
+      width: 50%;
+      height: auto;
+      margin-bottom: 16px;
+  }
