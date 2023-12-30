@@ -18,3 +18,18 @@ ul>ul {
     padding-left: 20px;
     margin-bottom: 16px;
 }
+
+main {
+    padding: 50px 5%;
+  }
+  @media (min-width: 768px) {
+    main {
+        padding: 75px 10%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    main {
+        padding: 75px 20%;
+    }
+  }

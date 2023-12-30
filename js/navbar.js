@@ -8,5 +8,5 @@ const hamburgerEvent = (navigation, close, open) => {
     openHam.style.display = open;
 };
 
-openHam.addEventListener('click', () => hamburgerEvent("flex", "block", "none"));
-closeHam.addEventListener('click', () => hamburgerEvent("none", "none", "block"));
+openHam.addEventListener('click', () => hamburgerEvent("grid", "flex", "none"));
+closeHam.addEventListener('click', () => hamburgerEvent("none", "none", "flex"));

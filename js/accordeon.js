@@ -1,5 +1,5 @@
-var acc = document.getElementsByClassName("accordion");
-var i;
+let acc = document.getElementsByClassName("accordion");
+let i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
@@ -8,11 +8,22 @@ for (i = 0; i < acc.length; i++) {
     this.classList.toggle("active");
 
     /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
+    let panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
     } else {
       panel.style.display = "block";
     }
+
+    closeAllPanels(this);
   });
 } 
+
+const closeAllPanels = (currentPanel) => {
+  let panels = document.querySelectorAll('.panel');
+  panels.forEach(panel => {
+    if (panel !== currentPanel.nextElementSibling) {
+      panel.style.display = "none";
+    }
+  });
+}
